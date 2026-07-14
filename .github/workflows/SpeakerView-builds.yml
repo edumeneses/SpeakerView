@@ -2,7 +2,7 @@ name: "SpeakerView builds"
 on: push
 
 env:
-  GODOT_VERSION: 4.5
+  GODOT_VERSION: 4.7
   EXPORT_NAME: SpeakerView
   PROJECT_PATH: .
 
@@ -10,7 +10,7 @@ env:
 jobs:
   export-windows:
     runs-on: ubuntu-latest
-    container: dunkelgrau/godot:4.5
+    container: dunkelgrau/godot:4.7
     steps:
       - name: Create symbolic link for export templates
         run: ln -s /root/.local /github/home/.local
@@ -31,7 +31,7 @@ jobs:
 
   export-linux-arm:
     runs-on: ubuntu-latest
-    container: dunkelgrau/godot:4.5
+    container: dunkelgrau/godot:4.7
     steps:
       - name: Create symbolic link for export templates
         run: ln -s /root/.local /github/home/.local
@@ -53,7 +53,7 @@ jobs:
 
   export-linux:
     runs-on: ubuntu-latest
-    container: dunkelgrau/godot:4.5
+    container: dunkelgrau/godot:4.7
     steps:
       - name: Create symbolic link for export templates
         run: ln -s /root/.local /github/home/.local
@@ -74,7 +74,7 @@ jobs:
 
   export-mac:
     runs-on: ubuntu-latest
-    container: dunkelgrau/godot:4.5
+    container: dunkelgrau/godot:4.7
     steps:
       - name: Create symbolic link for export templates
         run: ln -s /root/.local /github/home/.local
