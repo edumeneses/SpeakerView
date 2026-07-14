@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://dgx85am3uu7o7"]
+[gd_scene format=3 uid="uid://dgx85am3uu7o7"]
 
 [ext_resource type="Script" uid="uid://dt23xwmtbclsw" path="res://scripts/SpeakerView.gd" id="1_ov2dc"]
 [ext_resource type="Script" uid="uid://dregoekocefre" path="res://scripts/OrbitCamera.gd" id="2_gy427"]
@@ -254,27 +254,27 @@ shading_mode = 0
 albedo_color = Color(0.843137, 0.843137, 0.843137, 1)
 disable_receive_shadows = true
 
-[node name="SpeakerView" type="Node3D"]
+[node name="SpeakerView" type="Node3D" unique_id=1791357035]
 script = ExtResource("1_ov2dc")
 
-[node name="Center" type="Node3D" parent="."]
+[node name="Center" type="Node3D" parent="." unique_id=1105511976]
 transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
 
-[node name="OrbitCamera" type="Camera3D" parent="Center"]
+[node name="OrbitCamera" type="Camera3D" parent="Center" unique_id=290785098]
 unique_name_in_owner = true
 transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 2, 3, 7.93245)
 script = ExtResource("2_gy427")
 
-[node name="cam_light" type="DirectionalLight3D" parent="Center/OrbitCamera"]
+[node name="cam_light" type="DirectionalLight3D" parent="Center/OrbitCamera" unique_id=629111351]
 transform = Transform3D(1, 3.48787e-16, -3.48787e-16, -3.48787e-16, 1, 3.48787e-16, 3.48787e-16, -3.48787e-16, 1, 0, 0, 0)
 light_energy = 0.8
 
-[node name="FreeCamera" type="Camera3D" parent="Center"]
+[node name="FreeCamera" type="Camera3D" parent="Center" unique_id=325063964]
 unique_name_in_owner = true
 transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 4, 6, 15.8649)
 script = ExtResource("2_iqjbo")
 
-[node name="FulldomeCamera" type="Camera3D" parent="Center" node_paths=PackedStringArray("subviewport")]
+[node name="FulldomeCamera" type="Camera3D" parent="Center" unique_id=1096541205 node_paths=PackedStringArray("subviewport")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, -1.12238e-23, -1.21652e-31, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2.08165e-12, -2.08165e-12, -2.08165e-12)
 visible = false
@@ -284,22 +284,22 @@ lens = 7
 subviewport = NodePath("SubViewport")
 dynamically_resize_subviewport = true
 
-[node name="SubViewport" type="SubViewport" parent="Center/FulldomeCamera"]
+[node name="SubViewport" type="SubViewport" parent="Center/FulldomeCamera" unique_id=1147837903]
 msaa_3d = 1
 screen_space_aa = 1
 
-[node name="cam_light" type="DirectionalLight3D" parent="Center/FulldomeCamera"]
+[node name="cam_light" type="DirectionalLight3D" parent="Center/FulldomeCamera" unique_id=1195685709]
 transform = Transform3D(1, 3.48787e-16, -3.48787e-16, 3.4878702e-16, -4.37114e-08, 1, 3.4878697e-16, -1, -4.37114e-08, 4, 15.8649, -6.0000005)
 light_energy = 0.8
 
-[node name="FrameRate" type="Label" parent="."]
+[node name="FrameRate" type="Label" parent="." unique_id=780516616]
 visible = false
 offset_left = 2.0
 offset_top = 32.0
 offset_right = 142.0
 offset_bottom = 58.0
 
-[node name="Debug" type="Label" parent="."]
+[node name="Debug" type="Label" parent="." unique_id=26763378]
 visible = false
 offset_left = 1.0
 offset_top = 57.0
@@ -307,7 +307,7 @@ offset_right = 468.0
 offset_bottom = 83.0
 text = "DEBUG"
 
-[node name="HelpPanel" type="MarginContainer" parent="."]
+[node name="HelpPanel" type="MarginContainer" parent="." unique_id=574238595]
 unique_name_in_owner = true
 visible = false
 anchors_preset = 15
@@ -320,12 +320,12 @@ theme_override_constants/margin_top = 85
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="Panel" type="Panel" parent="HelpPanel"]
+[node name="Panel" type="Panel" parent="HelpPanel" unique_id=376700482]
 layout_mode = 2
 mouse_force_pass_scroll_events = false
 theme_override_styles/panel = SubResource("StyleBoxFlat_6didg")
 
-[node name="MarginContainer" type="MarginContainer" parent="HelpPanel/Panel"]
+[node name="MarginContainer" type="MarginContainer" parent="HelpPanel/Panel" unique_id=1555061948]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -337,224 +337,224 @@ theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
 
-[node name="ScrollContainer" type="ScrollContainer" parent="HelpPanel/Panel/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="HelpPanel/Panel/MarginContainer" unique_id=1714764066]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HelpPanel/Panel/MarginContainer/ScrollContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HelpPanel/Panel/MarginContainer/ScrollContainer" unique_id=421448949]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 17
 
-[node name="CloseButton" type="Button" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer"]
+[node name="CloseButton" type="Button" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer" unique_id=1193740435]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 text = " X "
 
-[node name="GlobalControls" type="VBoxContainer" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer"]
+[node name="GlobalControls" type="VBoxContainer" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer" unique_id=1325067201]
 layout_mode = 2
 size_flags_horizontal = 6
 theme_override_constants/separation = 7
 
-[node name="Spacer" type="Control" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls"]
+[node name="Spacer" type="Control" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" unique_id=1147287810]
 custom_minimum_size = Vector2(0, 9.615)
 layout_mode = 2
 
-[node name="GlobalControlsTitle" type="Label" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls"]
+[node name="GlobalControlsTitle" type="Label" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" unique_id=551459259]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Global Controls"
 
-[node name="KeybindingHelp" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" unique_id=1354870555 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = " F "
 help_text = "Toggle fullscreen"
 
-[node name="KeybindingHelp2" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp2" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" unique_id=794037506 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = "f4"
 help_text = "Show performance window"
 
-[node name="KeybindingHelp3" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp3" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" unique_id=459098330 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = " C "
 help_text = "Switch camera"
 
-[node name="CloseSpeakerViewKeyBinging" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" instance=ExtResource("4_b1xjj")]
+[node name="CloseSpeakerViewKeyBinging" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" unique_id=317549730 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = "Ctrl+Q"
 help_text = "Quit SpeakerView"
 
-[node name="KeybindingHelp5" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp5" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" unique_id=801648132 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = "Alt+H"
 help_text = "Show hall"
 
-[node name="KeybindingHelp6" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp6" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" unique_id=942292244 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = "Alt+N"
 help_text = "Show source numbers"
 
-[node name="KeybindingHelp7" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp7" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" unique_id=1782387042 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = "Alt+Z"
 help_text = "Show speaker numbers"
 
-[node name="KeybindingHelp12" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp12" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" unique_id=1415042771 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = "Alt+S"
 help_text = "Show speakers"
 
-[node name="KeybindingHelp8" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp8" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" unique_id=1471924289 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = "Alt+T"
 help_text = "Show speaker triplets (only in Dome)"
 
-[node name="KeybindingHelp9" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp9" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" unique_id=2145284286 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = "Alt+A"
 help_text = "Show source activity"
 
-[node name="KeybindingHelp10" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp10" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" unique_id=1680590223 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = "Alt+L"
 help_text = "Show speaker level"
 
-[node name="KeybindingHelp11" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp11" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" unique_id=1719427675 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = "Alt+O"
 help_text = "Show sphere or cube"
 
-[node name="KeybindingHelp13" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp13" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/GlobalControls" unique_id=1033227554 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = "Alt+D"
 help_text = "Toggle fulldome camera"
 
-[node name="CameraControls" type="VBoxContainer" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer"]
+[node name="CameraControls" type="VBoxContainer" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer" unique_id=1546123897]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
 theme_override_constants/separation = 4
 
-[node name="Spacer2" type="Control" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls"]
+[node name="Spacer2" type="Control" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=1430164987]
 custom_minimum_size = Vector2(0, 9.615)
 layout_mode = 2
 
-[node name="OrbitCameraControlsTitle" type="Label" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls"]
+[node name="OrbitCameraControlsTitle" type="Label" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=801165757]
 custom_minimum_size = Vector2(0, 40.005)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Orbit Camera Controls"
 
-[node name="KeybindingHelp" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=1800636138 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = "Left Click"
 help_text = "Rotate camera"
 
-[node name="KeybindingHelp2" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp2" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=658099065 instance=ExtResource("4_b1xjj")]
 custom_minimum_size = Vector2(0, 0.83)
 layout_mode = 2
 keybinding_text = "Scroll Wheel"
 help_text = "Zoom in and out"
 
-[node name="Spacer" type="Control" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls"]
+[node name="Spacer" type="Control" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=1425651317]
 custom_minimum_size = Vector2(0, 9.615)
 layout_mode = 2
 
-[node name="FreeCameraControlsTitle" type="Label" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls"]
+[node name="FreeCameraControlsTitle" type="Label" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=1913870311]
 custom_minimum_size = Vector2(0, 40.005)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Free Camera Controls"
 
-[node name="KeybindingHelp10" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp10" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=1311128432 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = "Right Click"
 help_text = "Rotate camera"
 
-[node name="KeybindingHelp12" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp12" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=1147346816 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = "Left Click"
 help_text = "Move camera"
 
-[node name="KeybindingHelp11" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp11" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=956664868 instance=ExtResource("4_b1xjj")]
 custom_minimum_size = Vector2(0, 0.83)
 layout_mode = 2
 keybinding_text = "Scroll Wheel"
 help_text = "Zoom in and out"
 
-[node name="KeybindingHelp3" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp3" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=1699607520 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = " W "
 help_text = "Go forward"
 
-[node name="KeybindingHelp4" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp4" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=226395812 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = " A "
 help_text = "Move left"
 
-[node name="KeybindingHelp5" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp5" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=353931869 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = " S "
 help_text = "Go backward"
 
-[node name="KeybindingHelp6" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp6" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=1225930333 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = " D "
 help_text = "Move right"
 
-[node name="KeybindingHelp7" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp7" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=316234802 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = " Q "
 help_text = "Go down"
 
-[node name="KeybindingHelp8" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp8" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=848624334 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = " E "
 help_text = "Go up"
 
-[node name="KeybindingHelp9" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp9" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=912811224 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = " R "
 help_text = "Reset camera position"
 
-[node name="Spacer3" type="Control" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls"]
+[node name="Spacer3" type="Control" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=1212112133]
 custom_minimum_size = Vector2(0, 9.615)
 layout_mode = 2
 
-[node name="Fulldome Camera Controls" type="Label" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls"]
+[node name="Fulldome Camera Controls" type="Label" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=699923577]
 custom_minimum_size = Vector2(0, 40.005)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Fulldome Camera Controls"
 
-[node name="KeybindingHelp13" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp13" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=550505952 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = " A "
 help_text = "Rotate scene counterclockwise"
 
-[node name="KeybindingHelp14" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp14" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=1171595040 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = " D "
 help_text = "Rotate scene clockwise"
 
-[node name="KeybindingHelp15" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp15" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=499729694 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = " R "
 help_text = "Reset rotation"
 
-[node name="KeybindingHelp16" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp16" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=79594143 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = " + "
 help_text = "Add 10° to FOV"
 
-[node name="KeybindingHelp17" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" instance=ExtResource("4_b1xjj")]
+[node name="KeybindingHelp17" parent="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CameraControls" unique_id=1660428755 instance=ExtResource("4_b1xjj")]
 layout_mode = 2
 keybinding_text = " - "
 help_text = "Remove 10° to FOV"
 
-[node name="ConfigPanel" type="MarginContainer" parent="."]
+[node name="ConfigPanel" type="MarginContainer" parent="." unique_id=1112426807]
 unique_name_in_owner = true
 visible = false
 anchors_preset = 15
@@ -568,12 +568,12 @@ theme_override_constants/margin_right = 165
 theme_override_constants/margin_bottom = 165
 script = ExtResource("5_2pnwc")
 
-[node name="Panel" type="Panel" parent="ConfigPanel"]
+[node name="Panel" type="Panel" parent="ConfigPanel" unique_id=90191072]
 layout_mode = 2
 mouse_force_pass_scroll_events = false
 theme_override_styles/panel = SubResource("StyleBoxFlat_6didg")
 
-[node name="MarginContainer" type="MarginContainer" parent="ConfigPanel/Panel"]
+[node name="MarginContainer" type="MarginContainer" parent="ConfigPanel/Panel" unique_id=19607056]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -585,52 +585,52 @@ theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 34
 theme_override_constants/margin_bottom = 34
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ConfigPanel/Panel/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ConfigPanel/Panel/MarginContainer" unique_id=1697809580]
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer" unique_id=45791502]
 layout_mode = 2
 
-[node name="CloseButton" type="Button" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="CloseButton" type="Button" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=401192685]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 text = " X "
 
-[node name="ConfigsTitle" type="Label" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="ConfigsTitle" type="Label" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1951784070]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
 text = "Configurations"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer" unique_id=113166231]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ScrollContainer" type="ScrollContainer" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1751101350]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Configs" type="VBoxContainer" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer"]
+[node name="Configs" type="VBoxContainer" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer" unique_id=1834583116]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 7
 
-[node name="SGNetworkConfLabel" type="Label" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs"]
+[node name="SGNetworkConfLabel" type="Label" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs" unique_id=1750543510]
 custom_minimum_size = Vector2(0, 32.395)
 layout_mode = 2
 text = "SpatGRIS Network Configs"
 horizontal_alignment = 1
 
-[node name="UDPInputPortConfig" type="HBoxContainer" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs"]
+[node name="UDPInputPortConfig" type="HBoxContainer" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs" unique_id=1491486199]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs/UDPInputPortConfig"]
+[node name="Label" type="Label" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs/UDPInputPortConfig" unique_id=2089572030]
 layout_mode = 2
 text = "UDP input port"
 
-[node name="UDPINSpinBox" type="SpinBox" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs/UDPInputPortConfig"]
+[node name="UDPINSpinBox" type="SpinBox" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs/UDPInputPortConfig" unique_id=469268746]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -639,14 +639,14 @@ max_value = 65535.0
 value = 18022.0
 rounded = true
 
-[node name="UDPOutputPortConfig" type="HBoxContainer" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs"]
+[node name="UDPOutputPortConfig" type="HBoxContainer" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs" unique_id=2060720589]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs/UDPOutputPortConfig"]
+[node name="Label" type="Label" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs/UDPOutputPortConfig" unique_id=112812314]
 layout_mode = 2
 text = "UDP output port"
 
-[node name="UDPOUTSpinBox" type="SpinBox" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs/UDPOutputPortConfig"]
+[node name="UDPOUTSpinBox" type="SpinBox" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs/UDPOutputPortConfig" unique_id=88215185]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -655,37 +655,37 @@ max_value = 65535.0
 value = 18023.0
 rounded = true
 
-[node name="UDPOutputAddressConfig" type="HBoxContainer" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs"]
+[node name="UDPOutputAddressConfig" type="HBoxContainer" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs" unique_id=719424989]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs/UDPOutputAddressConfig"]
+[node name="Label" type="Label" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs/UDPOutputAddressConfig" unique_id=1761805667]
 layout_mode = 2
 text = "UDP output address"
 
-[node name="SpatGRISIPLineEdit" type="LineEdit" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs/UDPOutputAddressConfig"]
+[node name="SpatGRISIPLineEdit" type="LineEdit" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs/UDPOutputAddressConfig" unique_id=2058975479]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "127.0.0.1"
 
-[node name="Spacer" type="Control" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs"]
+[node name="Spacer" type="Control" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs" unique_id=1804462216]
 custom_minimum_size = Vector2(0, 4.365)
 layout_mode = 2
 
-[node name="SGNetworkConfLabel2" type="Label" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs"]
+[node name="SGNetworkConfLabel2" type="Label" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs" unique_id=1693894801]
 custom_minimum_size = Vector2(0, 32.395)
 layout_mode = 2
 text = "External Integration Network Configs"
 horizontal_alignment = 1
 
-[node name="OSCInputPortConfig" type="HBoxContainer" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs"]
+[node name="OSCInputPortConfig" type="HBoxContainer" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs" unique_id=1683997936]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs/OSCInputPortConfig"]
+[node name="Label" type="Label" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs/OSCInputPortConfig" unique_id=1079858095]
 layout_mode = 2
 text = "OSC input port "
 
-[node name="SpinBox" type="SpinBox" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs/OSCInputPortConfig"]
+[node name="SpinBox" type="SpinBox" parent="ConfigPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/Configs/OSCInputPortConfig" unique_id=1862423735]
 layout_mode = 2
 size_flags_horizontal = 3
 min_value = 1024.0
@@ -693,24 +693,24 @@ max_value = 65535.0
 value = 4646.0
 rounded = true
 
-[node name="UIOverlay" type="HBoxContainer" parent="."]
+[node name="UIOverlay" type="HBoxContainer" parent="." unique_id=544184494]
 offset_left = 17.0
 offset_top = 12.0
 offset_right = 201.0
 offset_bottom = 45.0
 size_flags_horizontal = 3
 
-[node name="HelpPannelButton" type="Button" parent="UIOverlay"]
+[node name="HelpPannelButton" type="Button" parent="UIOverlay" unique_id=1881199637]
 custom_minimum_size = Vector2(35.69, 0)
 layout_mode = 2
 text = "?"
 
-[node name="SettingsButton" type="Button" parent="UIOverlay"]
+[node name="SettingsButton" type="Button" parent="UIOverlay" unique_id=104759375]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(35.69, 0)
 layout_mode = 2
 
-[node name="SettingsIcon" type="TextureRect" parent="UIOverlay/SettingsButton"]
+[node name="SettingsIcon" type="TextureRect" parent="UIOverlay/SettingsButton" unique_id=1263850460]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 2.0
@@ -719,12 +719,12 @@ offset_bottom = 31.0
 texture = ExtResource("5_0kivh")
 expand_mode = 1
 
-[node name="CameraButton" type="Button" parent="UIOverlay"]
+[node name="CameraButton" type="Button" parent="UIOverlay" unique_id=1464009791]
 custom_minimum_size = Vector2(35.69, 0)
 layout_mode = 2
 script = ExtResource("4_yakyd")
 
-[node name="CameraIcon" type="TextureRect" parent="UIOverlay/CameraButton"]
+[node name="CameraIcon" type="TextureRect" parent="UIOverlay/CameraButton" unique_id=1971460826]
 layout_mode = 0
 offset_left = 5.0
 offset_top = 7.0
@@ -733,12 +733,12 @@ offset_bottom = 26.0
 texture = ExtResource("4_pruru")
 expand_mode = 1
 
-[node name="CurrentCameraName" type="Label" parent="UIOverlay"]
+[node name="CurrentCameraName" type="Label" parent="UIOverlay" unique_id=183577478]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Orbit Camera"
 
-[node name="NoSGPanel" type="MarginContainer" parent="."]
+[node name="NoSGPanel" type="MarginContainer" parent="." unique_id=1920209819]
 unique_name_in_owner = true
 visible = false
 anchors_preset = 15
@@ -752,11 +752,11 @@ theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 script = ExtResource("9_n6adn")
 
-[node name="Panel" type="Panel" parent="NoSGPanel"]
+[node name="Panel" type="Panel" parent="NoSGPanel" unique_id=927584960]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_qpma7")
 
-[node name="MarginContainer" type="MarginContainer" parent="NoSGPanel/Panel"]
+[node name="MarginContainer" type="MarginContainer" parent="NoSGPanel/Panel" unique_id=697125320]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -768,10 +768,10 @@ theme_override_constants/margin_top = 71
 theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 145
 
-[node name="VBoxContainer" type="VBoxContainer" parent="NoSGPanel/Panel/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="NoSGPanel/Panel/MarginContainer" unique_id=1761687690]
 layout_mode = 2
 
-[node name="AlertNoSGLabel" type="Label" parent="NoSGPanel/Panel/MarginContainer/VBoxContainer"]
+[node name="AlertNoSGLabel" type="Label" parent="NoSGPanel/Panel/MarginContainer/VBoxContainer" unique_id=566176278]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_vertical = 0
@@ -783,74 +783,74 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Button" type="Button" parent="NoSGPanel/Panel/MarginContainer/VBoxContainer"]
+[node name="Button" type="Button" parent="NoSGPanel/Panel/MarginContainer/VBoxContainer" unique_id=687268632]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
 theme_override_font_sizes/font_size = 25
 text = "Ok !"
 
-[node name="hall" type="Node3D" parent="."]
+[node name="hall" type="Node3D" parent="." unique_id=1432021683]
 
-[node name="light_back" type="OmniLight3D" parent="hall"]
+[node name="light_back" type="OmniLight3D" parent="hall" unique_id=188420319]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 15, 10)
 light_energy = 0.5
 omni_range = 30.0
 
-[node name="light_front" type="OmniLight3D" parent="hall"]
+[node name="light_front" type="OmniLight3D" parent="hall" unique_id=1432238076]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 15, -10)
 light_energy = 0.5
 omni_range = 30.0
 
-[node name="light_left" type="OmniLight3D" parent="hall"]
+[node name="light_left" type="OmniLight3D" parent="hall" unique_id=178219534]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 15, 2.08165e-12)
 light_energy = 0.5
 omni_range = 30.0
 
-[node name="light_right" type="OmniLight3D" parent="hall"]
+[node name="light_right" type="OmniLight3D" parent="hall" unique_id=38050298]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 15, 2.08165e-12)
 light_energy = 0.5
 omni_range = 30.0
 
-[node name="light_middle" type="OmniLight3D" parent="hall"]
+[node name="light_middle" type="OmniLight3D" parent="hall" unique_id=1863233663]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.47414, 0)
 light_energy = 2.263
 omni_range = 21.512
 
-[node name="floor_deep" type="MeshInstance3D" parent="hall"]
+[node name="floor_deep" type="MeshInstance3D" parent="hall" unique_id=2107216064]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -19.5, 0)
 visible = false
 material_override = SubResource("StandardMaterial3D_vny03")
 cast_shadow = 0
 mesh = SubResource("PlaneMesh_dxpxv")
 
-[node name="wall_left" type="MeshInstance3D" parent="hall"]
+[node name="wall_left" type="MeshInstance3D" parent="hall" unique_id=593139834]
 transform = Transform3D(4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, -3.48787e-16, 3.47258e-15, 8.74228e-08, -1, -16.665, 0, 0)
 visible = false
 cast_shadow = 0
 mesh = SubResource("PlaneMesh_g3gkn")
 skeleton = NodePath("../..")
 
-[node name="wall_front" type="MeshInstance3D" parent="hall"]
+[node name="wall_front" type="MeshInstance3D" parent="hall" unique_id=1407673613]
 transform = Transform3D(2.25947e-15, 4.37114e-08, 1, 1, -4.37114e-08, -3.48787e-16, 4.37114e-08, 1, -4.37114e-08, 0, 0, -16.665)
 visible = false
 cast_shadow = 0
 mesh = SubResource("PlaneMesh_g3gkn")
 
-[node name="wall_back" type="MeshInstance3D" parent="hall"]
+[node name="wall_back" type="MeshInstance3D" parent="hall" unique_id=1761443908]
 transform = Transform3D(1.5619e-15, 4.37114e-08, -1, 1, -4.37114e-08, -3.48787e-16, -4.37114e-08, -1, -4.37114e-08, 0, 0, 16.665)
 visible = false
 cast_shadow = 0
 mesh = SubResource("PlaneMesh_g3gkn")
 skeleton = NodePath("../wall_front")
 
-[node name="wall_right" type="MeshInstance3D" parent="hall"]
+[node name="wall_right" type="MeshInstance3D" parent="hall" unique_id=905016355]
 transform = Transform3D(-4.37114e-08, -1, 3.48787e-16, 1, -4.37114e-08, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, 16.665, 0, 0)
 visible = false
 cast_shadow = 0
 mesh = SubResource("PlaneMesh_g3gkn")
 
-[node name="floor_stage" type="MeshInstance3D" parent="hall"]
+[node name="floor_stage" type="MeshInstance3D" parent="hall" unique_id=1245896724]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -0.5, 2.08165e-12)
 visible = false
 material_override = SubResource("StandardMaterial3D_vny03")
@@ -858,329 +858,329 @@ transparency = 0.69
 cast_shadow = 0
 mesh = SubResource("PlaneMesh_dxpxv")
 
-[node name="axes" type="Node3D" parent="."]
+[node name="axes" type="Node3D" parent="." unique_id=245312519]
 script = ExtResource("5_2k5yi")
 
-[node name="x_pos" type="MeshInstance3D" parent="axes"]
+[node name="x_pos" type="MeshInstance3D" parent="axes" unique_id=263276591]
 transform = Transform3D(-3.49691e-09, -5, 0, 0.08, -2.18557e-07, 0, 0, 0, 0.08, 5, 0, 0)
 material_override = SubResource("StandardMaterial3D_d6lsf")
 transparency = 0.3
 mesh = SubResource("CylinderMesh_x2nl3")
 
-[node name="x_neg" type="MeshInstance3D" parent="axes"]
+[node name="x_neg" type="MeshInstance3D" parent="axes" unique_id=1701821348]
 transform = Transform3D(-2.18557e-09, -5, 0, 0.05, -2.18557e-07, 0, 0, 0, 0.05, -5, 0, 0)
 material_override = SubResource("StandardMaterial3D_y07ow")
 transparency = 0.2
 mesh = SubResource("CylinderMesh_x2nl3")
 
-[node name="y_pos" type="MeshInstance3D" parent="axes"]
+[node name="y_pos" type="MeshInstance3D" parent="axes" unique_id=177930368]
 transform = Transform3D(0.08, 0, 0, 0, -2.18557e-07, -0.08, 0, 5, -3.49691e-09, 0, 0, -5)
 material_override = SubResource("StandardMaterial3D_vymwx")
 transparency = 0.3
 mesh = SubResource("CylinderMesh_x2nl3")
 
-[node name="y_neg" type="MeshInstance3D" parent="axes"]
+[node name="y_neg" type="MeshInstance3D" parent="axes" unique_id=316492513]
 transform = Transform3D(0.05, 0, 0, 0, -2.18557e-07, -0.05, 0, 5, -2.18557e-09, 0, 0, 5)
 material_override = SubResource("StandardMaterial3D_g78s2")
 transparency = 0.2
 mesh = SubResource("CylinderMesh_x2nl3")
 
-[node name="z_pos" type="MeshInstance3D" parent="axes"]
+[node name="z_pos" type="MeshInstance3D" parent="axes" unique_id=251751983]
 transform = Transform3D(0.08, 0, 0, 0, 5, 0, 0, 0, 0.08, 0, 5, 0)
 material_override = SubResource("StandardMaterial3D_pij2j")
 transparency = 0.3
 mesh = SubResource("CylinderMesh_x2nl3")
 
-[node name="z_neg" type="MeshInstance3D" parent="axes"]
+[node name="z_neg" type="MeshInstance3D" parent="axes" unique_id=13472459]
 transform = Transform3D(0.05, 0, 0, 0, 5, 0, 0, 0, 0.05, 0, -5, 0)
 material_override = SubResource("StandardMaterial3D_5yhw8")
 transparency = 0.2
 mesh = SubResource("CylinderMesh_x2nl3")
 
-[node name="text_x" type="MeshInstance3D" parent="axes"]
+[node name="text_x" type="MeshInstance3D" parent="axes" unique_id=1004865883]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 0.5, 10.5, 0, 0)
 material_override = SubResource("StandardMaterial3D_r70js")
 mesh = SubResource("TextMesh_17oh2")
 skeleton = NodePath("../x_pos")
 
-[node name="text_y" type="MeshInstance3D" parent="axes"]
+[node name="text_y" type="MeshInstance3D" parent="axes" unique_id=414326645]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 0.5, 0, 0, -10.5)
 material_override = SubResource("StandardMaterial3D_r70js")
 mesh = SubResource("TextMesh_fakj1")
 skeleton = NodePath("../x_pos")
 
-[node name="text_z" type="MeshInstance3D" parent="axes"]
+[node name="text_z" type="MeshInstance3D" parent="axes" unique_id=1659181182]
 transform = Transform3D(-1.31134e-07, 0, 0.5, 0, 3, 0, -3, 0, -2.18557e-08, 0, 10.5, 0)
 material_override = SubResource("StandardMaterial3D_r70js")
 mesh = SubResource("TextMesh_rowgc")
 skeleton = NodePath("../x_pos")
 
-[node name="text_deg_0" type="MeshInstance3D" parent="axes"]
+[node name="text_deg_0" type="MeshInstance3D" parent="axes" unique_id=1472689721]
 transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, 0.5, 0, -3.5, -2.18557e-08, 0.308, 0, -9.5)
 material_override = SubResource("StandardMaterial3D_r70js")
 cast_shadow = 0
 mesh = SubResource("TextMesh_617sc")
 
-[node name="text_deg_90" type="MeshInstance3D" parent="axes"]
+[node name="text_deg_90" type="MeshInstance3D" parent="axes" unique_id=986339198]
 transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, 0.5, 0, -3.5, -2.18557e-08, 9.5, 0, 0.5)
 material_override = SubResource("StandardMaterial3D_r70js")
 cast_shadow = 0
 mesh = SubResource("TextMesh_fjwch")
 
-[node name="text_deg_180" type="MeshInstance3D" parent="axes"]
+[node name="text_deg_180" type="MeshInstance3D" parent="axes" unique_id=133745596]
 transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, 0.5, 0, -3.5, -2.18557e-08, 0.603, 0, 9.5)
 material_override = SubResource("StandardMaterial3D_r70js")
 cast_shadow = 0
 mesh = SubResource("TextMesh_c054y")
 
-[node name="text_deg_270" type="MeshInstance3D" parent="axes"]
+[node name="text_deg_270" type="MeshInstance3D" parent="axes" unique_id=1191644334]
 transform = Transform3D(3.5, 0, 0, 0, -1.5299e-07, 0.5, 0, -3.5, -2.18557e-08, -9.3222, 0, 0.5)
 material_override = SubResource("StandardMaterial3D_r70js")
 cast_shadow = 0
 mesh = SubResource("TextMesh_h6qus")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="axes"]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="axes" unique_id=348194520]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -10, 3, 0)
 visible = false
 light_energy = 1.463
 
-[node name="sphere_grid" parent="." instance=ExtResource("6_5uwtl")]
+[node name="sphere_grid" parent="." unique_id=1929416485 instance=ExtResource("6_5uwtl")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 visible = false
 
-[node name="cube_grid" parent="." instance=ExtResource("7_mddiq")]
+[node name="cube_grid" parent="." unique_id=1191334727 instance=ExtResource("7_mddiq")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 visible = false
 
-[node name="origin_grid" type="Node3D" parent="."]
+[node name="origin_grid" type="Node3D" parent="." unique_id=455943305]
 
-[node name="dome" type="Node3D" parent="origin_grid"]
+[node name="dome" type="Node3D" parent="origin_grid" unique_id=1095646703]
 visible = false
 
-[node name="circle_one" type="MeshInstance3D" parent="origin_grid/dome"]
+[node name="circle_one" type="MeshInstance3D" parent="origin_grid/dome" unique_id=1786152096]
 material_override = SubResource("StandardMaterial3D_u0pgb")
 transparency = 0.5
 mesh = SubResource("TorusMesh_goct2")
 skeleton = NodePath("../..")
 
-[node name="circle_half" type="MeshInstance3D" parent="origin_grid/dome"]
+[node name="circle_half" type="MeshInstance3D" parent="origin_grid/dome" unique_id=313114713]
 material_override = SubResource("StandardMaterial3D_u0pgb")
 transparency = 0.5
 mesh = SubResource("TorusMesh_gqnw8")
 skeleton = NodePath("../..")
 
-[node name="circle_one_fourth" type="MeshInstance3D" parent="origin_grid/dome"]
+[node name="circle_one_fourth" type="MeshInstance3D" parent="origin_grid/dome" unique_id=695806195]
 material_override = SubResource("StandardMaterial3D_s5ja2")
 transparency = 0.5
 mesh = SubResource("TorusMesh_6gfxk")
 
-[node name="circle_three_fourth" type="MeshInstance3D" parent="origin_grid/dome"]
+[node name="circle_three_fourth" type="MeshInstance3D" parent="origin_grid/dome" unique_id=1148218491]
 material_override = SubResource("StandardMaterial3D_s5ja2")
 transparency = 0.5
 mesh = SubResource("TorusMesh_i6ag5")
 
-[node name="circle_five_fourth" type="MeshInstance3D" parent="origin_grid/dome"]
+[node name="circle_five_fourth" type="MeshInstance3D" parent="origin_grid/dome" unique_id=1652916568]
 material_override = SubResource("StandardMaterial3D_s5ja2")
 transparency = 0.5
 mesh = SubResource("TorusMesh_a05ot")
 
-[node name="axis_west" type="MeshInstance3D" parent="origin_grid/dome"]
+[node name="axis_west" type="MeshInstance3D" parent="origin_grid/dome" unique_id=1507849787]
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -7.5, 0, 0)
 material_override = SubResource("StandardMaterial3D_vbref")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_y0g6t")
 
-[node name="axis_east" type="MeshInstance3D" parent="origin_grid/dome"]
+[node name="axis_east" type="MeshInstance3D" parent="origin_grid/dome" unique_id=412086288]
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 7.5, 0, 0)
 material_override = SubResource("StandardMaterial3D_vbref")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_y0g6t")
 
-[node name="axis_north" type="MeshInstance3D" parent="origin_grid/dome"]
+[node name="axis_north" type="MeshInstance3D" parent="origin_grid/dome" unique_id=103286335]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -7.5)
 material_override = SubResource("StandardMaterial3D_vbref")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_y0g6t")
 
-[node name="axis_south" type="MeshInstance3D" parent="origin_grid/dome"]
+[node name="axis_south" type="MeshInstance3D" parent="origin_grid/dome" unique_id=1442902506]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 7.5)
 material_override = SubResource("StandardMaterial3D_vbref")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_y0g6t")
 
-[node name="axis_ne" type="MeshInstance3D" parent="origin_grid/dome"]
+[node name="axis_ne" type="MeshInstance3D" parent="origin_grid/dome" unique_id=755842265]
 transform = Transform3D(-0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, -0.707107, 3.09086e-08, 5.31, 0, -5.31)
 material_override = SubResource("StandardMaterial3D_vbref")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_y0g6t")
 
-[node name="axis_se" type="MeshInstance3D" parent="origin_grid/dome"]
+[node name="axis_se" type="MeshInstance3D" parent="origin_grid/dome" unique_id=1332880474]
 transform = Transform3D(0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, 0.707107, -3.09086e-08, 5.31, 0, 5.31)
 material_override = SubResource("StandardMaterial3D_vbref")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_y0g6t")
 
-[node name="axis_sw" type="MeshInstance3D" parent="origin_grid/dome"]
+[node name="axis_sw" type="MeshInstance3D" parent="origin_grid/dome" unique_id=142150560]
 transform = Transform3D(-0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, -0.707107, 3.09086e-08, -5.31, 0, 5.31)
 material_override = SubResource("StandardMaterial3D_vbref")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_y0g6t")
 
-[node name="axis_nw" type="MeshInstance3D" parent="origin_grid/dome"]
+[node name="axis_nw" type="MeshInstance3D" parent="origin_grid/dome" unique_id=921897904]
 transform = Transform3D(0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, 0.707107, -3.09086e-08, -5.31, 0, -5.31)
 material_override = SubResource("StandardMaterial3D_vbref")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_y0g6t")
 
-[node name="cube" type="Node3D" parent="origin_grid"]
+[node name="cube" type="Node3D" parent="origin_grid" unique_id=35403159]
 visible = false
 
-[node name="circle_one" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="circle_one" type="MeshInstance3D" parent="origin_grid/cube" unique_id=1887620534]
 material_override = SubResource("StandardMaterial3D_8blla")
 transparency = 0.5
 mesh = SubResource("TorusMesh_140ms")
 skeleton = NodePath("../..")
 
-[node name="circle_max" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="circle_max" type="MeshInstance3D" parent="origin_grid/cube" unique_id=2085029834]
 material_override = SubResource("StandardMaterial3D_u1y30")
 transparency = 0.5
 mesh = SubResource("TorusMesh_ejf6b")
 skeleton = NodePath("../..")
 
-[node name="square_unit_w" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="square_unit_w" type="MeshInstance3D" parent="origin_grid/cube" unique_id=2007867815]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -10, 0, 0)
 material_override = SubResource("StandardMaterial3D_gh12a")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_il7a8")
 
-[node name="square_unit_e" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="square_unit_e" type="MeshInstance3D" parent="origin_grid/cube" unique_id=1198316297]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10, 0, 0)
 material_override = SubResource("StandardMaterial3D_gh12a")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_il7a8")
 
-[node name="square_unit_n" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="square_unit_n" type="MeshInstance3D" parent="origin_grid/cube" unique_id=1814385353]
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, -10)
 material_override = SubResource("StandardMaterial3D_gh12a")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_il7a8")
 
-[node name="square_unit_s" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="square_unit_s" type="MeshInstance3D" parent="origin_grid/cube" unique_id=1977578521]
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 10)
 material_override = SubResource("StandardMaterial3D_gh12a")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_il7a8")
 
-[node name="square_half_w" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="square_half_w" type="MeshInstance3D" parent="origin_grid/cube" unique_id=892712302]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -5, 0, 0)
 material_override = SubResource("StandardMaterial3D_ik85v")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_lqrsh")
 
-[node name="square_half_e" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="square_half_e" type="MeshInstance3D" parent="origin_grid/cube" unique_id=54001985]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5, 0, 0)
 material_override = SubResource("StandardMaterial3D_7svkb")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_xcb5t")
 
-[node name="square_half_n" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="square_half_n" type="MeshInstance3D" parent="origin_grid/cube" unique_id=859103655]
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, -5)
 material_override = SubResource("StandardMaterial3D_oohom")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_lvjuv")
 
-[node name="square_half_s" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="square_half_s" type="MeshInstance3D" parent="origin_grid/cube" unique_id=479285442]
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 5)
 material_override = SubResource("StandardMaterial3D_ujwp4")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_n74gi")
 
-[node name="square_limit_w" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="square_limit_w" type="MeshInstance3D" parent="origin_grid/cube" unique_id=2101089859]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -16.66, 0, 0)
 material_override = SubResource("StandardMaterial3D_gh12a")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_ceqct")
 
-[node name="square_limit_e" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="square_limit_e" type="MeshInstance3D" parent="origin_grid/cube" unique_id=2064630424]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 16.66, 0, 0)
 material_override = SubResource("StandardMaterial3D_gh12a")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_ceqct")
 
-[node name="square_limit_n" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="square_limit_n" type="MeshInstance3D" parent="origin_grid/cube" unique_id=686482024]
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, -16.66)
 material_override = SubResource("StandardMaterial3D_gh12a")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_ceqct")
 
-[node name="square_limit_s" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="square_limit_s" type="MeshInstance3D" parent="origin_grid/cube" unique_id=1329704719]
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 16.66)
 material_override = SubResource("StandardMaterial3D_gh12a")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_ceqct")
 
-[node name="axis_n" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="axis_n" type="MeshInstance3D" parent="origin_grid/cube" unique_id=373167195]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -8.33)
 material_override = SubResource("StandardMaterial3D_oj5we")
 transparency = 0.6
 mesh = SubResource("CylinderMesh_8hnc6")
 
-[node name="axis_s" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="axis_s" type="MeshInstance3D" parent="origin_grid/cube" unique_id=2075221832]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 8.33)
 material_override = SubResource("StandardMaterial3D_hp1v7")
 transparency = 0.6
 mesh = SubResource("CylinderMesh_8hnc6")
 
-[node name="axis_e" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="axis_e" type="MeshInstance3D" parent="origin_grid/cube" unique_id=273528153]
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 8.33, 0, 0)
 material_override = SubResource("StandardMaterial3D_ssp4g")
 transparency = 0.6
 mesh = SubResource("CylinderMesh_8hnc6")
 
-[node name="axis_w" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="axis_w" type="MeshInstance3D" parent="origin_grid/cube" unique_id=233218979]
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -8.33, 0, 0)
 material_override = SubResource("StandardMaterial3D_s3r4b")
 transparency = 0.6
 mesh = SubResource("CylinderMesh_8hnc6")
 
-[node name="axis_ne" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="axis_ne" type="MeshInstance3D" parent="origin_grid/cube" unique_id=980758162]
 transform = Transform3D(-0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, -0.707107, 3.09086e-08, 8.33, 0, -8.33)
 material_override = SubResource("StandardMaterial3D_bluk6")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_fsa40")
 
-[node name="axis_sw" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="axis_sw" type="MeshInstance3D" parent="origin_grid/cube" unique_id=1588766481]
 transform = Transform3D(-0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, -0.707107, 3.09086e-08, -8.33, 0, 8.33)
 material_override = SubResource("StandardMaterial3D_cm2le")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_fsa40")
 
-[node name="axis_nw" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="axis_nw" type="MeshInstance3D" parent="origin_grid/cube" unique_id=1777284499]
 transform = Transform3D(0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, 0.707107, -3.09086e-08, -8.33, 0, -8.33)
 material_override = SubResource("StandardMaterial3D_lyijq")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_fsa40")
 
-[node name="axis_se" type="MeshInstance3D" parent="origin_grid/cube"]
+[node name="axis_se" type="MeshInstance3D" parent="origin_grid/cube" unique_id=1927089840]
 transform = Transform3D(0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, 0.707107, -3.09086e-08, 8.33, 0, 8.33)
 material_override = SubResource("StandardMaterial3D_rdtjm")
 transparency = 0.5
 mesh = SubResource("CylinderMesh_fsa40")
 
-[node name="triplets" type="MeshInstance3D" parent="."]
+[node name="triplets" type="MeshInstance3D" parent="." unique_id=1370533869]
 material_override = SubResource("StandardMaterial3D_0akp0")
 
-[node name="Network" type="Node" parent="."]
+[node name="Network" type="Node" parent="." unique_id=1563210305]
 script = ExtResource("8_ntmpu")
 
-[node name="OSCServer" type="Node" parent="Network"]
+[node name="OSCServer" type="Node" parent="Network" unique_id=313920017]
 unique_name_in_owner = true
 script = ExtResource("14_7bw8e")
 
-[node name="Sources" type="Node" parent="."]
+[node name="Sources" type="Node" parent="." unique_id=2079520224]
 script = ExtResource("9_376al")
 
-[node name="Speakers" type="Node" parent="."]
+[node name="Speakers" type="Node" parent="." unique_id=2083340622]
 script = ExtResource("10_0gnjq")
 
 [connection signal="pressed" from="HelpPanel/Panel/MarginContainer/ScrollContainer/HBoxContainer/CloseButton" to="." method="_on_help_panel_close_button_pressed"]

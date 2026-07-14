@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ckysy30g2fd55"]
+[gd_scene format=3 uid="uid://ckysy30g2fd55"]
 
 [ext_resource type="Script" uid="uid://cnv42v0expdv0" path="res://scripts/speaker.gd" id="1_q6jf0"]
 [ext_resource type="PackedScene" uid="uid://mhtxww22xdau" path="res://scenes/cube_edges.tscn" id="2_yyxc8"]
@@ -9,27 +9,27 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vnw8b"]
 
-[node name="speaker" type="Node3D"]
+[node name="speaker" type="Node3D" unique_id=945146297]
 script = ExtResource("1_q6jf0")
 
-[node name="Neighbourhood" type="Area3D" parent="."]
+[node name="Neighbourhood" type="Area3D" parent="." unique_id=930504791]
 collision_layer = 2
 input_ray_pickable = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Neighbourhood"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Neighbourhood" unique_id=72033411]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 shape = SubResource("SphereShape3D_p1ddc")
 
-[node name="cube" type="MeshInstance3D" parent="."]
+[node name="cube" type="MeshInstance3D" parent="." unique_id=306417116]
 cast_shadow = 0
 mesh = SubResource("BoxMesh_5xs8x")
 
-[node name="Area3D" type="Area3D" parent="cube"]
+[node name="Area3D" type="Area3D" parent="cube" unique_id=1444437563]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="cube/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cube/Area3D" unique_id=387724219]
 shape = SubResource("BoxShape3D_vnw8b")
 
-[node name="cube_edges" parent="cube" instance=ExtResource("2_yyxc8")]
+[node name="cube_edges" parent="cube" unique_id=1577920181 instance=ExtResource("2_yyxc8")]
 transform = Transform3D(0.51, 0, 0, 0, 0.51, 0, 0, 0, 0.51, 0, 0, 0)
 
 [connection signal="input_event" from="cube/Area3D" to="." method="_on_area_3d_input_event"]

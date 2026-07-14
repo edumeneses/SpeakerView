@@ -1,30 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://c51kvjg8rfpuq"]
+[gd_scene format=3 uid="uid://c51kvjg8rfpuq"]
 
 [ext_resource type="PackedScene" uid="uid://b3xloojxf8oh" path="res://assets/cube_grid.glb" id="1_kppvp"]
 [ext_resource type="Material" uid="uid://dhmde0jx3gybx" path="res://materials/cube_grid.tres" id="2_ebsq2"]
 
-[node name="cube_grid" instance=ExtResource("1_kppvp")]
+[node name="cube_grid" unique_id=1065048375 instance=ExtResource("1_kppvp")]
 
-[node name="Grid_floor" parent="." index="0"]
+[node name="Grid_floor" parent="." index="0" unique_id=1073547248]
 material_override = ExtResource("2_ebsq2")
 transparency = 0.7
 
-[node name="Grid_top" parent="." index="1"]
+[node name="Grid_top" parent="." index="1" unique_id=1086719101]
 material_override = ExtResource("2_ebsq2")
 transparency = 0.7
 
-[node name="Grid_left" parent="." index="2"]
+[node name="Grid_left" parent="." index="2" unique_id=1992169435]
 material_override = ExtResource("2_ebsq2")
 transparency = 0.7
 
-[node name="Grid_right" parent="." index="3"]
+[node name="Grid_right" parent="." index="3" unique_id=848233954]
 material_override = ExtResource("2_ebsq2")
 transparency = 0.7
 
-[node name="Grid_front" parent="." index="4"]
+[node name="Grid_front" parent="." index="4" unique_id=1415225952]
 material_override = ExtResource("2_ebsq2")
 transparency = 0.7
 
-[node name="Grid_back" parent="." index="5"]
+[node name="Grid_back" parent="." index="5" unique_id=371133709]
 material_override = ExtResource("2_ebsq2")
 transparency = 0.7

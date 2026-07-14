@@ -1,9 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvyqopiijpond"]
+[gd_scene format=3 uid="uid://bvyqopiijpond"]
 
 [ext_resource type="Script" uid="uid://d1x32u578vlsf" path="res://scripts/source.gd" id="1_ie8li"]
 
-[node name="source" type="Node3D"]
+[node name="source" type="Node3D" unique_id=967261344]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 script = ExtResource("1_ie8li")
 
-[node name="mbap_spans" type="MeshInstance3D" parent="."]
+[node name="mbap_spans" type="MeshInstance3D" parent="." unique_id=545746303]
