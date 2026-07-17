@@ -15,7 +15,7 @@ SpatGRIS installer comes with SpeakerView Forward. If SpeakView does not render 
 
 ## Building
 ### Download Godot Engine
-Download and install [Godot 4.5](https://github.com/godotengine/godot/releases/tag/4.5-stable)
+Download and install [Godot 4.7.1](https://github.com/godotengine/godot/releases/tag/4.7.1-stable)
 
 ### Clone SpeakerView sources
 ```
